@@ -23,7 +23,6 @@ export default function AppText({children, style, variant = "medium", ...rest}: 
 const styles = StyleSheet.create({
     bold: {
         fontSize: s(18),
-        fontWeight: "bold", // 👈 missing
         color:AppColor.blackColor,
     },
     medium: {
