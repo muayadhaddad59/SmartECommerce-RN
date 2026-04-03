@@ -7,8 +7,10 @@ import TotalView from "@/components/cart/TotalView";
 import {products} from "@/data/products";
 import {sharedPaddingHorizontal} from "@/styles/SharedStyles";
 import AppButton from "@/components/buttons/AppButton";
+import {useRouter} from "expo-router";
 
 export default function CartScreen() {
+    const router = useRouter();
     return (
         <SafeAreaView style={{flex: 1, paddingHorizontal: sharedPaddingHorizontal}}>
             <HomeHeader title="Cart"/>
@@ -21,8 +23,8 @@ export default function CartScreen() {
                     <CartItem {...item} />
                 )}
             />
-            <TotalView itemPrice={5000} orderTotal={5000}/>
-            <AppButton title={"Continue"}/>
+            <TotalView itemPrice={"5000"} orderTotal={"5000"}/>
+            <AppButton title={"Continue"} onPress={()=>{router.navigate("/checkout")}}/>
         </SafeAreaView>
     )
 }
