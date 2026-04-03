@@ -12,7 +12,7 @@ export default function TabsLayout() {
             tabBarActiveTintColor: AppColor.primaryColor,
             tabBarLabelStyle: {
                 marginTop: vs(4),
-                fontSize: s(12)
+                fontSize: s(10)
             },
             tabBarStyle: IS_ANDROID && {
                 height: vs(50),

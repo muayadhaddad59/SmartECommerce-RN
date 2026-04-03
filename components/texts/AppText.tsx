@@ -2,6 +2,7 @@ import {StyleSheet, Text, TextProps} from 'react-native'
 import React from 'react'
 import {s} from "react-native-size-matters"
 import {AppColor} from "@/styles/colors";
+import {AppFonts} from "@/styles/fonts";
 
 type Variant = "medium" | "bold";
 
@@ -24,9 +25,11 @@ const styles = StyleSheet.create({
     bold: {
         fontSize: s(18),
         color:AppColor.blackColor,
+        fontFamily: AppFonts.Bold,
     },
     medium: {
         fontSize: s(16),
         color: AppColor.blackColor,
+        fontFamily: AppFonts.Medium,
     }
 })

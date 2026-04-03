@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native'
 import React, {useState} from 'react'
-import {sharedPaddingHorizontal} from "@/constants/SharedStyles";
+import {sharedPaddingHorizontal} from "@/styles/SharedStyles";
 import {Image} from "expo-image";
 import {IMAGES} from "@/constants/images-paths";
 import {s, vs} from 'react-native-size-matters';

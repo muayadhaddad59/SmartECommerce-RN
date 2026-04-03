@@ -6,7 +6,7 @@ import HomeHeader from "@/components/headers/HomeHeader";
 export default function CartScreen() {
     return (
         <SafeAreaView>
-            <HomeHeader/>
+            <HomeHeader title="Cart"/>
             <Text>CartScreen</Text>
         </SafeAreaView>
     )

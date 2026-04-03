@@ -6,7 +6,7 @@ import HomeHeader from "@/components/headers/HomeHeader";
 export default function ProfileScreen() {
     return (
         <SafeAreaView>
-            <HomeHeader/>
+            <HomeHeader title="Profile"/>
             <Text>ProfileScreen</Text>
         </SafeAreaView>
     )
