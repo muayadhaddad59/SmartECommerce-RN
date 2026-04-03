@@ -6,16 +6,19 @@ import ProfileSectionButton from "@/components/buttons/ProfileSectionButton";
 import {sharedPaddingHorizontal} from "@/styles/SharedStyles";
 import AppText from "@/components/texts/AppText";
 import {s, vs} from 'react-native-size-matters';
+import {useRouter} from "expo-router";
 
 export default function ProfileScreen() {
+    const router = useRouter()
+
     return (
         <SafeAreaView>
             <HomeHeader title="Profile"/>
             <AppText variant={"bold"} style={{fontSize: s(18), marginTop: vs(10)}}>Hello Ahmed</AppText>
            <View style={{paddingHorizontal: sharedPaddingHorizontal}}>
-               <ProfileSectionButton title={"My orders"}/>
-               <ProfileSectionButton title={"My Language"}/>
-               <ProfileSectionButton title={"Logout"}/>
+               <ProfileSectionButton title={"My orders"} onPress={()=>{router.push('/profile/my-orders')}}/>
+               <ProfileSectionButton title={"My Language"} onPress={()=>{}}/>
+               <ProfileSectionButton title={"Logout"} onPress={()=>{}}/>
            </View>
         </SafeAreaView>
     )

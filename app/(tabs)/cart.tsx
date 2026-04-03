@@ -20,7 +20,7 @@ export default function CartScreen() {
                 data={products}
                 keyExtractor={(item) => item.id.toString()}
                 renderItem={({item}) => (
-                    <CartItem {...item} />
+                    <CartItem qty={0} {...item} />
                 )}
             />
             <TotalView itemPrice={"5000"} orderTotal={"5000"}/>
