@@ -5,8 +5,11 @@ import HomeHeader from "@/components/headers/HomeHeader";
 import ProductCard from "@/components/cards/ProductCard";
 import {products} from "@/data/products";
 import {s, vs} from 'react-native-size-matters';
+import {useDispatch} from "react-redux";
+import {addToCart} from "@/store/reducers/cartSlice";
 
 export default function HomeScreen() {
+    const dispatch = useDispatch()
     return (
         <SafeAreaView>
             <HomeHeader title="Home"/>
@@ -20,6 +23,7 @@ export default function HomeScreen() {
                         price={item.price}
                         imageURL={item.imageURL}
                         onAddToCartPress={() => {
+                            dispatch(addToCart(item));
                         }}
                     />
                 )}

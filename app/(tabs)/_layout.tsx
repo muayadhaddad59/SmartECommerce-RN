@@ -4,9 +4,12 @@ import {AppColor} from "@/styles/colors";
 import {s, vs} from 'react-native-size-matters';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import {IS_ANDROID} from "@/constants/constants";
+import {Provider} from "react-redux";
+import {store} from "@/store/store";
 
 export default function TabsLayout() {
     return (
+        <Provider store={store}>
         <Tabs screenOptions={{
             headerShown: false,
             tabBarActiveTintColor: AppColor.primaryColor,
@@ -36,5 +39,6 @@ export default function TabsLayout() {
                 )
             }}/>
         </Tabs>
+        </Provider>
     )
 }
